@@ -1,0 +1,195 @@
+/* 기본 설정 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+body {
+  background-color: #f9f9f9;
+  color: #222;
+}
+
+/* 상단 네비게이션 */
+.header {
+  background-color: #ffffff;
+  border-bottom: 1px solid #ccc;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .logo {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.nav {
+  display: flex;
+  gap: 30px;
+  font-size: 14px;
+}
+
+/* 섹션 타이틀 */
+.section-title {
+  background-color: #e7e3df;
+  text-align: center;
+  padding: 50px 0;
+  font-size: 22px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* 공통 컨테이너 */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* 카드형 도서 리스트 */
+.book-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.book-card {
+  width: 140px;
+  text-align: center;
+}
+
+.book-card .thumbnail {
+  background-color: #ccc;
+  width: 100%;
+  height: 200px;
+  margin-bottom: 10px;
+}
+
+.book-card .title {
+  font-size: 13px;
+  color: #222;
+}
+
+/* 마이페이지 및 폼 영역 */
+.form-box {
+  background-color: #e0dfde;
+  padding: 40px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.form-box h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 13px;
+  color: #444;
+}
+
+.input-group input,
+.input-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+  background-color: #fff;
+}
+
+/* 버튼 스타일 */
+.btn {
+  padding: 10px 20px;
+  background-color: #4b5563;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn:hover {
+  background-color: #374151;
+}
+
+.btn-group {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* 테이블 스타일 */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.table th,
+.table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+  font-size: 14px;
+  background-color: #fff;
+}
+
+.table th {
+  background-color: #f1f1f1;
+  font-weight: bold;
+}
+
+/* 검색 영역 */
+.search-box {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.search-box input {
+  padding: 10px;
+  width: 400px;
+  border: 1px solid #aaa;
+  border-radius: 6px 0 0 6px;
+}
+
+.search-box button {
+  padding: 10px 20px;
+  background-color: #ccc;
+  border: 1px solid #aaa;
+  border-left: none;
+  border-radius: 0 6px 6px 0;
+  cursor: pointer;
+}
+
+/* 사이드 필터 */
+.sidebar {
+  background-color: #dedede;
+  padding: 20px;
+  width: 180px;
+  border-radius: 6px;
+  font-size: 13px;
+}
+
+/* 하단 footer */
+.footer {
+  background-color: #444;
+  color: #fff;
+  text-align: center;
+  padding: 30px;
+  font-size: 13px;
+  margin-top: 50px;
+}
