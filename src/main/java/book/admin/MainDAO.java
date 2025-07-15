@@ -64,7 +64,7 @@ public class MainDAO {
 				}
 			}
 		}
-		public int selectCount() { //회원 수
+		public int memberCount() { //회원 수
 			int result=0;
 			try {
 				conn=getConnection();
@@ -81,6 +81,23 @@ public class MainDAO {
 				endConnection();
 			}
 			return result;
-			
+		}
+		public int bookCount() {	//도서 수
+			int result=0;
+			try {
+				conn=getConnection();
+				String sql="select count(*) from book";
+				pstmt=conn.prepareStatement(sql);
+				
+				rs=pstmt.executeQuery();
+				if(rs.next()) {
+					result=rs.getInt(1);
+				}
+			}catch(Exception e) {
+				e.printStackTrace();
+			}finally {
+				endConnection();
+			}
+			return result;
 		}
 }

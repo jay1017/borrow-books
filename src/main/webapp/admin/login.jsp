@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+	pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,10 +8,9 @@
 </head>
 <body>
 	<form action="loginPro.jsp">
-	<input type="text" name="mid" id="mid" placeholder="아이디를 입력하세요"/>
-	<input type="password" name="mpw" id="mpw" placeholder="비밀번호를 입력하세요"/> 
-	<input type="submit" value="로그인">
- 	</form>
-	
+		<input type="text" name="mid" id="mid" placeholder="아이디를 입력하세요" /> 
+		<input type="password" name="mpw" id="mpw" placeholder="비밀번호를 입력하세요" /> 
+		<input type="submit" value="로그인">
+	</form>
 </body>
 </html>
