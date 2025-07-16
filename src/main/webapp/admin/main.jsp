@@ -7,20 +7,17 @@
 <%
 MainDAO dao = MainDAO.getDAO();
 
-int mcount = dao.memberCount();
-int bcount = dao.bookCount();
-int lcount = dao.loanCount();
-int ncount = dao.notCount();
+int mcount = dao.selectMemberCount(); //회원 수
+int bcount = dao.selectBookCount();	//도서 수
+int lcount = dao.selectLoanCount(); //대여 수
+int ncount = dao.selectNotCount(); //미납 수
 %>
 <meta charset="UTF-8">
 <title>메인</title>
 <link rel="stylesheet" href="/book/resources/css/common.css" />
 </head>
 <body>
-	<jsp:include page="/include/header.jsp"></jsp:include>
-	<div>
-		<img src="/book/resources/img/slide.jpg" style="width: 100%;" />
-	</div>
+	<jsp:include page="/admin/include/header.jsp"></jsp:include>
 	<table class="table">
 		<tr>
 			<th>회원 수</th>

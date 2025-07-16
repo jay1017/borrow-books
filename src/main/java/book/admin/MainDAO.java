@@ -64,7 +64,7 @@ public class MainDAO {
 				}
 			}
 		}
-		public int memberCount() { //회원 수
+		public int selectMemberCount() { //회원 수
 			int result=0;
 			try {
 				conn=getConnection();
@@ -82,7 +82,7 @@ public class MainDAO {
 			}
 			return result;
 		}
-		public int bookCount() {	//도서 수
+		public int selectBookCount() {	//도서 수
 			int result=0;
 			try {
 				conn=getConnection();
@@ -100,7 +100,7 @@ public class MainDAO {
 			}
 			return result;
 		}
-		public int loanCount() { //대출 수
+		public int selectLoanCount() { //대출 수
 			int result=0;
 			try {
 				conn=getConnection();
@@ -118,7 +118,7 @@ public class MainDAO {
 			}
 			return result;
 		}
-		public int notCount() { //미납 수
+		public int selectNotCount() { //미납 수
 			int result=0;
 			try {
 				conn=getConnection();
