@@ -12,6 +12,15 @@ public class MemberDAO {
 	PreparedStatement pstmt = null;
 	ResultSet rs = null;
 
+	private static MemberDAO instance = new MemberDAO();
+
+	public static MemberDAO getInstance() {
+		return instance;
+	}
+
+	private MemberDAO() {
+	}
+
 	// db연결
 	private Connection getConnection() {
 			try {
@@ -93,7 +102,11 @@ public class MemberDAO {
 	public int deleteMember(int mnum) {
 		int result=0;
 		try {
-			
+			conn = getConnection();
+			String sql = "delete from member3 where mnum=?";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setInt(1, mnum);
+			pstmt.executeUpdate();
 		}catch(Exception e) {
 			e.printStackTrace();
 		}finally {
@@ -101,7 +114,7 @@ public class MemberDAO {
 		}
 		return result;
 	}
-	//아이디 중복확인
+	//아이디 중복확인 mid가 있으면 1 없으면 0
 	public int selectMid(String mid) {
 		int result=0;
 		try {
@@ -153,12 +166,27 @@ public class MemberDAO {
 		MemberDTO mdto = null;
 		try {
 			conn = getConnection();
-			String sql = "update member3 set mpw=?, mname=?, mphone=?, memail=? where mnum=?";
-			pstmt.setString(1, mdto.getMpw());
-			pstmt.setString(2, mdto.getMname());
-			pstmt.setString(3, mdto.getMphone());
-			pstmt.setString(4, mdto.getMemail());
-			pstmt.setInt(5, mnum);
+			String sql = "update member3 set mname=?, mphone=?, memail=? where mnum=?";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, mdto.getMname());
+			pstmt.setString(2, mdto.getMphone());
+			pstmt.setString(3, mdto.getMemail());
+			pstmt.setInt(4, mnum);
+			pstmt.executeUpdate();
+		}catch(Exception e) {
+			e.printStackTrace();
+		}finally {
+			endConnection();
+		}
+	}
+	//비밀번호 변경
+	public void changePw(String pw, int mnum) {
+		try {
+			conn = getConnection();
+			String sql = "update member3 set mpw=? where mnum=?";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, pw);
+			pstmt.setInt(2, mnum);
 			pstmt.executeUpdate();
 		}catch(Exception e) {
 			e.printStackTrace();
