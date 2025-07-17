@@ -59,7 +59,7 @@ private static LoginDAO instance = new LoginDAO();
 		int result = 0;
 		try {
 			conn = getConnection();
-			String sql = "select * from member3 where mid=?, mpw=?";
+			String sql = "select * from member3 where mid=? and mpw=?";
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, mid);
 			pstmt.setString(2, mpw);
