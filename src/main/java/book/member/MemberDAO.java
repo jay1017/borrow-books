@@ -153,6 +153,7 @@ public class MemberDAO {
 				mdto.setMemail(rs.getString("memail"));
 				mdto.setMlevel(rs.getInt("mlevel"));
 				mdto.setAmlevel(rs.getInt("amlevel"));
+				mdto.setBirth(rs.getTimestamp("birth"));
 			}
 		}catch(Exception e) {
 			e.printStackTrace();

@@ -1,5 +1,7 @@
 package book.member;
 
+import java.sql.Timestamp;
+
 public class MemberDTO {
 
 	private int mnum;
@@ -10,8 +12,14 @@ public class MemberDTO {
 	private String memail;
 	private int mlevel;
 	private int amlevel;
+	private Timestamp birth;
 	
-	
+	public Timestamp getBirth() {
+		return birth;
+	}
+	public void setBirth(Timestamp birth) {
+		this.birth = birth;
+	}
 	public int getMnum() {
 		return mnum;
 	}
