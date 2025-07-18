@@ -260,3 +260,47 @@ body {
 	font-size: 13px;
 	margin-top: 50px;
 }
+/*여기부터 페이징 처리 css시작*/
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    gap: 10px;
+}
+
+.pagination a {
+    padding: 8px 12px;
+    text-decoration: none;
+    border: 1px solid #ddd;
+    color: #333;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+.pagination a:hover {
+    background-color: #f5f5f5;
+}
+
+.pagination .current {
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: white;
+    border: 1px solid #007bff;
+    border-radius: 4px;
+}
+
+.pagination .disabled {
+    padding: 8px 12px;
+    color: #999;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: not-allowed;
+}
+
+.info {
+    text-align: center;
+    margin: 10px 0;
+    color: #666;
+}
+/*페이징처리 css끝*/

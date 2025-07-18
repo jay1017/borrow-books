@@ -3,8 +3,8 @@
 <div class="header">
 	<div class="logo">신림도서관</div>
 	<div class="nav">
-		<a href="/book/info/info.jsp">도서</a> <a href="/search.jsp">카테고리</a> 
-		<a href="">출판사</a> <a href="">회원</a>
+		<a href="/book/admin/bookList.jsp">도서</a> <a href="/search.jsp">카테고리</a> 
+		<a href="/book/admin/publisher.jsp">출판사</a> <a href="">회원</a>
 	</div>
 	<div class="nav">
 		<%
